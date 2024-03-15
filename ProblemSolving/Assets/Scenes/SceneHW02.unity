@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81fef671c114a3747b795e42bc215504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spherePrefab: {fileID: 736727963962358930, guid: b27a2ad7ff849894cafad7e488b58273, type: 3}
+  BulletPrefab: {fileID: 736727963962358930, guid: b27a2ad7ff849894cafad7e488b58273, type: 3}
 --- !u!4 &1759867633
 Transform:
   m_ObjectHideFlags: 0
