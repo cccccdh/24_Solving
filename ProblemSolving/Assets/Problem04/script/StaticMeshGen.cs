@@ -77,8 +77,6 @@ public class StaticMeshGen : MonoBehaviour
 
         mf.mesh = mesh;
 
-        // Add material with yellow color
-        mr.material = new Material(Shader.Find("Standard"));
-        mr.material.color = Color.yellow;
+        mesh.RecalculateNormals();
     }
 }
