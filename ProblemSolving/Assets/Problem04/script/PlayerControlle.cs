@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControlle : MonoBehaviour
 {
     public GameObject Bullet;
     public DataStrucuture.Stack<GameObject> stack;
