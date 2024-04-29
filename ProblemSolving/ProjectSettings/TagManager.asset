@@ -5,11 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Red
+  - Wall
+  - Enemy
+  - EndPoint
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wall
   - Water
   - UI
   - 
