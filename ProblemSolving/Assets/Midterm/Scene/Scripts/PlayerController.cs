@@ -1,27 +1,50 @@
+using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
     public Transform cameraPivot;
     public TextMeshProUGUI UIText;
     public GameObject retryBtn;
     public Transform startPos;
+    public float speed;
+
+    Dictionary<Door, bool> doorStates = new Dictionary<Door, bool>(); // 각 문의 열림 여부를 추적
+
+    int hasKeyCount = 0;
 
     float rotationDuration = 1f; // 회전 시간
-
     float rotationTimer; // 회전 타이머
 
     bool isRotating; // 회전 중 여부
     bool gameOver = false;
+
     Quaternion startRotation; // 시작 회전 각도
     Quaternion targetRotation; // 목표 회전 각도
 
     private void Awake()
     {
         transform.position = new Vector3(startPos.position.x, 1f, startPos.position.z);
+        InitializeDoor();
+    }
+
+    void InitializeDoor()
+    {
+        // Door 태그를 가진 모든 게임 오브젝트를 찾습니다.
+        GameObject[] foundDoors = GameObject.FindGameObjectsWithTag("Door");
+
+        // 각 게임 오브젝트에 Door 컴포넌트가 있다면 리스트에 추가합니다.
+        foreach (GameObject doorObject in foundDoors)
+        {
+            Door doorComponent = doorObject.GetComponent<Door>();
+            if (doorComponent != null)
+            {
+                doorStates.Add(doorComponent, false); // 각 문의 초기 상태를 false(닫힘)로 설정
+            }
+        }
     }
 
     void Update()
@@ -33,11 +56,7 @@ public class PlayerController : MonoBehaviour
             CameraRotateAnimation();
         }
     }
-    public bool IsGameOver()
-    {
-        return gameOver;
-    }
-
+    
     void PlayerMove()
     {
         float hInput = 0; // 좌우 입력
@@ -58,6 +77,11 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKey(KeyCode.D))
         {
             hInput = 1f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TryInteractWithDoor();
         }
 
         // 카메라의 전방 벡터를 기준으로 이동 방향 설정
@@ -83,7 +107,30 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
         }
     }
+    void TryInteractWithDoor()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 1f))
+        {
+            if (hit.collider.CompareTag("Door"))
+            {
+                Door doorComponent = hit.collider.GetComponent<Door>();
+                if (doorComponent != null && doorStates.ContainsKey(doorComponent))
+                {
+                    if (doorStates[doorComponent] || hasKeyCount > 0) // 문이 열려있거나 열쇠를 가지고 있는 경우
+                    {
+                        doorComponent.ChangeDoorState();
+                        doorStates[doorComponent] = !doorStates[doorComponent]; // 문 상태 업데이트
 
+                        if (doorStates[doorComponent] && hasKeyCount > 0)
+                        {
+                            hasKeyCount--; // 문이 열렸고 열쇠를 사용한 경우, 열쇠 개수 감소
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     void CameraInput()
     {
         if (Input.GetKeyDown(KeyCode.O) && !isRotating)
@@ -140,10 +187,19 @@ public class PlayerController : MonoBehaviour
             retryBtn.gameObject.SetActive(true);
             gameOver = true;
         }
+        if (other.gameObject.CompareTag("Key"))
+        {
+            hasKeyCount++;
+            other.gameObject.SetActive(false);
+        }
     }
 
     public void RetryGame()
     {
         SceneManager.LoadScene("JailBreak");
+    }
+    public bool IsGameOver()
+    {
+        return gameOver;
     }
 }

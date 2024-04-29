@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - Enemy
   - EndPoint
+  - Door
+  - Key
   layers:
   - Default
   - TransparentFX
