@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +127,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &37613916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -243,6 +248,9 @@ Transform:
   m_PrefabInstance: {fileID: 783262156}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &309865828
+=======
+--- !u!1 &127108011
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,6 +258,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 309865829}
   m_Layer: 0
   m_Name: Point
@@ -690,6 +699,11 @@ GameObject:
   - component: {fileID: 663526255}
   - component: {fileID: 663526254}
   - component: {fileID: 663526253}
+=======
+  - component: {fileID: 127108014}
+  - component: {fileID: 127108013}
+  - component: {fileID: 127108012}
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -697,24 +711,41 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!81 &663526253
+=======
+--- !u!81 &127108012
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 663526252}
   m_Enabled: 1
 --- !u!20 &663526254
+=======
+  m_GameObject: {fileID: 127108011}
+  m_Enabled: 1
+--- !u!20 &127108013
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 663526252}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
+=======
+  m_GameObject: {fileID: 127108011}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -737,11 +768,19 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
+<<<<<<< HEAD
   far clip plane: 264.4
   field of view: 60
   orthographic: 1
   orthographic size: 26.66
   m_Depth: 1
+=======
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -756,12 +795,17 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+<<<<<<< HEAD
 --- !u!4 &663526255
+=======
+--- !u!4 &127108014
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 663526252}
   serializedVersion: 2
   m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
@@ -1282,6 +1326,18 @@ Transform:
   m_PrefabInstance: {fileID: 1426450293}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1196112630
+=======
+  m_GameObject: {fileID: 127108011}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1246951006
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1289,6 +1345,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1196112631}
   m_Layer: 0
   m_Name: Area
@@ -1624,6 +1681,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1409029246}
   - component: {fileID: 1409029245}
+=======
+  - component: {fileID: 1246951008}
+  - component: {fileID: 1246951007}
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1631,13 +1692,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!108 &1409029245
+=======
+--- !u!108 &1246951007
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1409029244}
+=======
+  m_GameObject: {fileID: 1246951006}
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
@@ -1693,13 +1762,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+<<<<<<< HEAD
 --- !u!4 &1409029246
+=======
+--- !u!4 &1246951008
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1409029244}
+=======
+  m_GameObject: {fileID: 1246951006}
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
@@ -1708,6 +1785,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &1416016145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2759,10 +2837,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+<<<<<<< HEAD
   - {fileID: 1094826092}
   - {fileID: 1409029246}
   - {fileID: 546102298}
@@ -2771,3 +2852,7 @@ SceneRoots:
   - {fileID: 1196112631}
   - {fileID: 1740211577}
   - {fileID: 2117469832}
+=======
+  - {fileID: 127108014}
+  - {fileID: 1246951008}
+>>>>>>> 920690679dff901f1f79ff1a42843e220b00445e
